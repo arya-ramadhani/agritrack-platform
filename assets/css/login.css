@@ -1,0 +1,316 @@
+:root {
+    --primary-dark: #0d1f0d;
+    --primary-green: #1a472a;
+    --secondary-green: #2e7d32;
+    --accent-green: #4caf50;
+    --light-bg: #f8f9fa;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-green));
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Wrapper */
+.auth-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Card - Di tengah */
+.auth-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+/* Flex container untuk row */
+.row.g-0 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+/* Kolom kiri dan kanan setinggi card */
+.col-lg-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEFT SIDE */
+.logo-section {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-green));
+    color: #fff;
+    padding: 50px 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo-icon {
+    font-size: 72px;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+}
+
+.logo-text {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.logo-description {
+    font-size: 15px;
+    opacity: .85;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.features-list {
+    text-align: left;
+}
+
+.feature-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.feature-item i {
+    color: var(--accent-green);
+    margin-right: 10px;
+    font-size: 18px;
+    width: 24px;
+}
+
+.feature-item:last-child {
+    margin-bottom: 0;
+}
+
+/* RIGHT SIDE */
+.form-section {
+    background: var(--light-bg);
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.form-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* INPUT */
+.form-control {
+    border-radius: 8px;
+    padding: 12px 14px;
+    border: 2px solid #dee2e6;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-green);
+    box-shadow: 0 0 0 .2rem rgba(46, 125, 50, .25);
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+.input-group-text {
+    background: #fff;
+    border: 2px solid #dee2e6;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle {
+    background: #fff;
+    border: 2px solid #dee2e6;
+    border-left: none;
+    color: #666;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 14px;
+    cursor: pointer;
+}
+
+.input-group .form-control {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+/* BUTTON */
+.btn-login {
+    background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+    color: white;
+    border: none;
+    padding: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, .3);
+    color: white;
+}
+
+/* ALERT */
+.alert {
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* LINK */
+.register-link {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+}
+
+.register-link span {
+    color: #666;
+    margin-right: 5px;
+}
+
+.register-link a {
+    color: var(--secondary-green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+       RESPONSIVE
+    ======================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .logo-section {
+        padding: 40px 25px;
+    }
+
+    .form-section {
+        padding: 35px;
+    }
+
+    .auth-card {
+        max-height: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .auth-container {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .auth-card {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    }
+
+    .logo-section {
+        padding: 30px 20px;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .logo-icon {
+        font-size: 60px;
+    }
+
+    .logo-text {
+        font-size: 32px;
+    }
+
+    .form-section {
+        padding: 30px 25px;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .form-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .form-subtitle {
+        text-align: center;
+    }
+}
+
+/* HP kecil */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .auth-card {
+        border-radius: 12px;
+    }
+
+    .logo-section {
+        padding: 25px 15px;
+        min-height: 250px;
+    }
+
+    .form-section {
+        padding: 25px 20px;
+        min-height: 450px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+}

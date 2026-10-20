@@ -1,0 +1,564 @@
+/* ============================================================
+   AgriTrack — Global Design System
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --green-900: #1b4332;
+    --green-800: #1b5e20;
+    --green-700: #2e7d32;
+    --green-600: #388e3c;
+    --green-500: #4caf50;
+    --green-400: #66bb6a;
+    --green-100: #e8f5e9;
+    --green-50:  #f1f8e9;
+
+    --amber-500: #ff8f00;
+    --amber-400: #ffa726;
+    --blue-600:  #1565c0;
+    --blue-500:  #1976d2;
+    --blue-100:  #e3f2fd;
+    --teal-600:  #00695c;
+    --teal-500:  #00796b;
+    --teal-100:  #e0f2f1;
+
+    --gray-900: #111827;
+    --gray-800: #1f2937;
+    --gray-700: #374151;
+    --gray-600: #4b5563;
+    --gray-500: #6b7280;
+    --gray-400: #9ca3af;
+    --gray-300: #d1d5db;
+    --gray-200: #e5e7eb;
+    --gray-100: #f3f4f6;
+    --gray-50:  #f9fafb;
+
+    --white: #ffffff;
+    --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+    --shadow-md:  0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+    --shadow-lg:  0 10px 40px rgba(0,0,0,.12), 0 4px 12px rgba(0,0,0,.08);
+    --shadow-xl:  0 20px 60px rgba(0,0,0,.15);
+    --radius-sm:  8px;
+    --radius-md:  12px;
+    --radius-lg:  16px;
+    --radius-xl:  24px;
+    --transition: all .25s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    background: var(--gray-50);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: var(--gray-800);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── Navbar ── */
+.agri-navbar {
+    background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 100%) !important;
+    box-shadow: 0 4px 20px rgba(27,67,50,.30);
+    padding: 0 1.5rem;
+    min-height: 64px;
+}
+
+.agri-navbar .navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    color: var(--white) !important;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .75rem 0;
+    text-decoration: none;
+}
+
+.agri-navbar .navbar-brand .brand-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.agri-navbar .nav-link {
+    color: rgba(255,255,255,.80) !important;
+    font-weight: 500;
+    font-size: .875rem;
+    padding: .5rem .9rem !important;
+    border-radius: var(--radius-sm);
+    margin: 0 2px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    text-decoration: none;
+}
+
+.agri-navbar .nav-link:hover {
+    color: var(--white) !important;
+    background: rgba(255,255,255,.15) !important;
+    transform: translateY(-1px);
+}
+
+.agri-navbar .nav-link.active {
+    color: var(--white) !important;
+    background: rgba(255,255,255,.22) !important;
+    font-weight: 600;
+}
+
+.agri-navbar .user-pill {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.20);
+    border-radius: 50px;
+    padding: .4rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--white);
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.agri-navbar .btn-logout {
+    background: rgba(255,255,255,.12);
+    border: 1.5px solid rgba(255,255,255,.35);
+    color: var(--white) !important;
+    font-size: .82rem;
+    font-weight: 600;
+    padding: .4rem 1rem;
+    border-radius: 50px;
+    transition: var(--transition);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+}
+
+.agri-navbar .btn-logout:hover {
+    background: rgba(255,255,255,.90);
+    color: var(--green-800) !important;
+    border-color: transparent;
+    transform: translateY(-1px);
+}
+
+/* ── Page Header ── */
+.page-header {
+    padding: 1.75rem 0 1rem;
+}
+
+.page-header h1,
+.page-header h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.page-header .page-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.page-header .page-subtitle {
+    font-size: .875rem;
+    color: var(--gray-500);
+    margin: .25rem 0 0 3.25rem;
+}
+
+/* ── Stat Cards ── */
+.stat-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card .stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.stat-card .stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: .25rem;
+    color: var(--gray-900);
+}
+
+.stat-card .stat-label {
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--gray-500);
+}
+
+.stat-card .stat-trend {
+    font-size: .78rem;
+    color: var(--gray-400);
+    margin-top: .5rem;
+}
+
+.stat-card.green  .stat-icon { background: var(--green-100); color: var(--green-700); }
+.stat-card.green::after       { background: var(--green-500); }
+
+.stat-card.blue   .stat-icon { background: var(--blue-100);  color: var(--blue-600);  }
+.stat-card.blue::after        { background: var(--blue-500);  }
+
+.stat-card.amber  .stat-icon { background: #fff3e0; color: var(--amber-500); }
+.stat-card.amber::after       { background: var(--amber-400); }
+
+.stat-card.teal   .stat-icon { background: var(--teal-100);  color: var(--teal-600);  }
+.stat-card.teal::after        { background: var(--teal-500);  }
+
+/* ── Cards ── */
+.agri-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.agri-card:hover { box-shadow: var(--shadow-md); }
+
+.agri-card .card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--gray-100);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.agri-card .card-header h5,
+.agri-card .card-header h6 {
+    font-weight: 700;
+    font-size: .95rem;
+    color: var(--gray-800);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.agri-card .card-header-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+}
+
+.agri-card .card-body {
+    padding: 1.5rem;
+}
+
+/* ── Tables ── */
+.agri-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .875rem;
+}
+
+.agri-table thead th {
+    background: var(--gray-50);
+    color: var(--gray-600);
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: .75rem 1rem;
+    border-bottom: 2px solid var(--gray-200);
+    white-space: nowrap;
+}
+
+.agri-table tbody td {
+    padding: .85rem 1rem;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-700);
+    vertical-align: middle;
+}
+
+.agri-table tbody tr:last-child td { border-bottom: none; }
+
+.agri-table tbody tr:hover td { background: var(--gray-50); }
+
+.agri-table .row-number {
+    width: 40px;
+    font-weight: 600;
+    color: var(--gray-400);
+    font-size: .8rem;
+}
+
+/* ── Badges ── */
+.agri-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    padding: .3rem .7rem;
+    border-radius: 50px;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+}
+
+.agri-badge.green  { background: var(--green-100); color: var(--green-700); }
+.agri-badge.blue   { background: var(--blue-100);  color: var(--blue-600);  }
+.agri-badge.amber  { background: #fff3e0; color: var(--amber-500); }
+.agri-badge.gray   { background: var(--gray-100);  color: var(--gray-600);  }
+.agri-badge.teal   { background: var(--teal-100);  color: var(--teal-600);  }
+.agri-badge.red    { background: #fce4ec; color: #c62828; }
+.agri-badge.purple { background: #f3e5f5; color: #7b1fa2; }
+
+/* ── Buttons ── */
+.btn-agri-primary {
+    background: linear-gradient(135deg, var(--green-700), var(--green-900));
+    color: var(--white);
+    border: none;
+    padding: .55rem 1.1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: .875rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-agri-primary:hover {
+    background: linear-gradient(135deg, var(--green-800), var(--green-900));
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(27,94,32,.30);
+    color: var(--white);
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    transition: var(--transition);
+}
+
+.btn-icon.edit   { background: #fff8e1; color: var(--amber-500); }
+.btn-icon.edit:hover { background: var(--amber-500); color: var(--white); transform: scale(1.08); }
+
+.btn-icon.delete { background: #fce4ec; color: #c62828; }
+.btn-icon.delete:hover { background: #c62828; color: var(--white); transform: scale(1.08); }
+
+/* ── Modals ── */
+.modal-content {
+    border: none;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+}
+
+.modal-header.agri-modal-header {
+    background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 100%);
+    color: var(--white);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    padding: 1.25rem 1.5rem;
+    border-bottom: none;
+}
+
+.modal-header.agri-modal-header .modal-title {
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.modal-header.agri-modal-header .btn-close {
+    filter: brightness(0) invert(1);
+    opacity: .8;
+}
+
+.modal-body { padding: 1.5rem; }
+.modal-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--gray-100); }
+
+/* ── Forms ── */
+.form-label {
+    font-weight: 600;
+    font-size: .82rem;
+    color: var(--gray-700);
+    margin-bottom: .4rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.form-control,
+.form-select {
+    border: 1.5px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    padding: .6rem .9rem;
+    font-size: .9rem;
+    color: var(--gray-800);
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--green-600);
+    box-shadow: 0 0 0 3px rgba(56,142,60,.15);
+    outline: none;
+}
+
+/* ── Alert ── */
+#alertContainer .alert {
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    font-size: .875rem;
+}
+
+/* ── Export Buttons ── */
+.btn-export-excel {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1.5px solid #a5d6a7;
+    padding: .5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: .82rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-export-excel:hover {
+    background: #2e7d32;
+    color: var(--white);
+    border-color: #2e7d32;
+    transform: translateY(-1px);
+}
+
+.btn-export-pdf {
+    background: #fce4ec;
+    color: #c62828;
+    border: 1.5px solid #f48fb1;
+    padding: .5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: .82rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-export-pdf:hover {
+    background: #c62828;
+    color: var(--white);
+    border-color: #c62828;
+    transform: translateY(-1px);
+}
+
+/* ── Weather Card ── */
+.weather-card {
+    background: linear-gradient(135deg, #1565c0 0%, #0288d1 100%);
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.weather-icon { font-size: 5rem; text-align: center; }
+.temp-display { font-size: 4rem; font-weight: 800; text-align: center; }
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeInUp .45s ease both; }
+
+/* ── Empty state ── */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--gray-400);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.empty-state p {
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .page-header h1, .page-header h2 { font-size: 1.3rem; }
+    .stat-card .stat-value { font-size: 1.6rem; }
+    .temp-display { font-size: 2.5rem; }
+    .weather-icon { font-size: 3.5rem; }
+    .agri-navbar { padding: 0 1rem; }
+    .agri-card .card-body { padding: 1rem; }
+}

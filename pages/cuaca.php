@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 require_once '../config/koneksi.php';
 requireLogin();
@@ -83,6 +83,7 @@ $kotaBabel = [
             border: none;
             padding: 12px 30px;
             font-weight: 600;
+            color: white;
             transition: all 0.3s;
         }
 

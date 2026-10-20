@@ -84,38 +84,6 @@ if (isset($_GET['success'])) {
                                     <span>Prediksi Cuaca BMKG</span>
                                 </div>
                             </div>
-
-                            <!-- Widget Prediksi Cuaca di Bawah Tracking Hasil Panen -->
-                            <div class="login-weather-widget mt-3 text-start" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 14px 16px;">
-                                <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <div class="d-flex align-items-center gap-1" style="font-size: 0.8rem; font-weight: 600; color: rgba(255, 255, 255, 0.9);">
-                                        <i class="fas fa-satellite-dish" style="color: var(--accent-green);"></i>
-                                        <span>Cuaca Babel Realtime</span>
-                                    </div>
-                                    <select id="loginWeatherCity" onchange="fetchLoginWeather(this.value)" style="background: rgba(0,0,0,0.25); color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 2px 8px; font-size: 0.72rem; outline: none; cursor: pointer;">
-                                        <option value="Pangkal Pinang" selected style="color:#000;">Pangkal Pinang</option>
-                                        <option value="Bangka" style="color:#000;">Bangka</option>
-                                        <option value="Bangka Barat" style="color:#000;">Bangka Barat</option>
-                                        <option value="Bangka Selatan" style="color:#000;">Bangka Selatan</option>
-                                        <option value="Bangka Tengah" style="color:#000;">Bangka Tengah</option>
-                                        <option value="Belitung" style="color:#000;">Belitung</option>
-                                        <option value="Belitung Timur" style="color:#000;">Belitung Timur</option>
-                                    </select>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <i id="loginWeatherIcon" class="fas fa-cloud-sun fa-2x" style="color: #ffd166;"></i>
-                                        <div>
-                                            <div id="loginWeatherTemp" style="font-size: 1.35rem; font-weight: 700; line-height: 1.1;">29°C</div>
-                                            <div id="loginWeatherCond" style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.8);">Cerah Berawan</div>
-                                        </div>
-                                    </div>
-                                    <div class="text-end" style="font-size: 0.7rem; color: rgba(255, 255, 255, 0.75); line-height: 1.5;">
-                                        <div><i class="fas fa-droplet text-info me-1"></i>Kelembaban: <span id="loginWeatherHum">78%</span></div>
-                                        <div><i class="fas fa-wind text-light me-1"></i>Angin: <span id="loginWeatherWind">12 km/j</span></div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
